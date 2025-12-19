@@ -1,0 +1,3204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stereoisomerism MCQs - MDCAT, NUMS, HEC, AKU & Competition Exams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: var(--primary);
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3.24px solid var(--primary);
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+        }
+
+        .mcq-option:hover {
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #1e3a8a, #1a56db);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+        }
+
+        .qa-answer strong {
+            color: var(--primary);
+        }
+
+        /* Equation styling */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+
+        /* Stereochemistry Specific */
+        .molecule-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            font-family: 'Courier New', monospace;
+            font-size: 0.567rem;
+        }
+
+        .chiral-center {
+            background: rgba(255, 215, 0, 0.1);
+            border-left: 3.24px solid #ffd700;
+            padding: 6.48px;
+            margin: 6.48px 0;
+        }
+
+        .isomer-pair {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 9.72px 0;
+        }
+
+        .isomer-box {
+            background: var(--light);
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            width: 45%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-atom"></i>
+            </div>
+            <h2>Stereoisomerism MCQs Portal</h2>
+            <p>Master Stereoisomerism for MDCAT, NUMS, HEC, AKU & Competition Exams with 40 MCQs and Detailed Explanations.</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Stereoisomerism MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | AKU | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>Complete Stereoisomerism with 40 MCQs & Detailed Explanations</h1>
+                <p>Master key concepts with detailed explanations, exceptional cases, and interactive questions for Pakistani exams</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT/NUMS</div>
+                    <div class="exam-desc">10-15% weightage in Chemistry</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">HEC Test</div>
+                    <div class="exam-desc">Graduate Assessment: Optical activity</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU Test</div>
+                    <div class="exam-desc">Medical Entry: Chirality in drugs</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">Advanced level: R/S configuration</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="intro">
+                    <i class="fas fa-atom"></i>
+                    <span>Stereoisomerism</span>
+                </button>
+                <button class="nav-btn" data-tab="geo">
+                    <i class="fas fa-project-diagram"></i>
+                    <span>Geometrical</span>
+                </button>
+                <button class="nav-btn" data-tab="optical">
+                    <i class="fas fa-eye"></i>
+                    <span>Optical Isomerism</span>
+                </button>
+                <button class="nav-btn" data-tab="chiral">
+                    <i class="fas fa-star"></i>
+                    <span>Chiral Center</span>
+                </button>
+                <button class="nav-btn" data-tab="lactic">
+                    <i class="fas fa-wine-bottle"></i>
+                    <span>Lactic Acid</span>
+                </button>
+                <button class="nav-btn" data-tab="activity">
+                    <i class="fas fa-adjust"></i>
+                    <span>Optical Activity</span>
+                </button>
+                <button class="nav-btn" data-tab="forty-mcqs">
+                    <i class="fas fa-question-circle"></i>
+                    <span>40 MCQs</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">40</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">25</div>
+                <div class="stat-label">Conceptual Q&A</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal is designed specifically for Pakistani MDCAT, NUMS, HEC, and AKU exam preparation. If you find any incorrect information or discrepancies, please inform us immediately through the WhatsApp channel. We strive to provide the most accurate and up-to-date content for your success.</p>
+            </div>
+        </div>
+
+        <!-- Stereoisomerism Introduction Tab -->
+        <div class="tab-content active" id="intro-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="explanation-title">Stereoisomerism: Fundamental Concepts</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Stereoisomerism?</h4>
+                    <p><strong>Stereoisomers</strong> are compounds that have the same molecular formula and connectivity (same structural formula) but differ in the spatial arrangement of atoms. Unlike constitutional isomers (which have different connectivity), stereoisomers differ only in how their atoms are oriented in space.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Types of Stereoisomerism</div>
+                        <ol>
+                            <li><strong>Geometrical Isomerism (Cis-Trans):</strong> Occurs due to restricted rotation around double bonds or in cyclic compounds.</li>
+                            <li><strong>Optical Isomerism:</strong> Molecules that are non-superimposable mirror images (enantiomers).</li>
+                            <li><strong>Diastereomers:</strong> Stereoisomers that are not mirror images of each other.</li>
+                            <li><strong>Conformational Isomers:</strong> Different arrangements due to rotation around single bonds (usually not separable).</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="molecule-diagram">
+                        <strong>Example: But-2-ene has geometrical isomers</strong><br>
+                        cis-But-2-ene (CH₃ groups same side)<br>
+                        trans-But-2-ene (CH₃ groups opposite sides)
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Focus Areas:</h4>
+                    <ul>
+                        <li>Identification of chiral centers</li>
+                        <li>Differentiation between enantiomers and diastereomers</li>
+                        <li>Cis-trans isomerism in alkenes and cyclic compounds</li>
+                        <li>Optical activity and specific rotation</li>
+                        <li>Meso compounds and their optical inactivity</li>
+                    </ul>
+                    
+                    <h4>Competition Level Exceptional Cases:</h4>
+                    <ol>
+                        <li><strong>Allenese:</strong> Compounds with cumulated double bonds can show chirality without chiral centers.</li>
+                        <li><strong>Atropisomerism:</strong> Steric hindrance prevents rotation in biphenyl compounds.</li>
+                        <li><strong>Helicenes:</strong> Screw-shaped molecules with helical chirality.</li>
+                        <li><strong>Meso compounds with even number of chiral centers:</strong> Internally compensated optical inactivity.</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Quick Identification</div>
+                        <p><strong>Step 1:</strong> Check for chiral centers (carbon with 4 different groups).<br>
+                        <strong>Step 2:</strong> Look for symmetry elements (plane of symmetry = achiral).<br>
+                        <strong>Step 3:</strong> For alkenes/cyclic compounds, check cis-trans possibility.<br>
+                        <strong>Step 4:</strong> Count stereoisomers: 2ⁿ where n = number of chiral centers (except meso forms).</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> How many stereoisomers are possible for 2,3-dichlorobutane?</p>
+                        <p><strong>Options:</strong> A) 2, B) 3, C) 4, D) 1</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Structure: CH₃-CHCl-CHCl-CH₃ (two chiral centers at C2 and C3)</li>
+                            <li>Both chiral centers have same groups: H, Cl, CH₃, and CHClCH₃</li>
+                            <li>Number of stereoisomers = 2² = 4 theoretically</li>
+                            <li>But check for meso forms: The molecule has plane of symmetry when both Cl are on same side?</li>
+                            <li>Actually, three stereoisomers: (2R,3R), (2S,3S), and meso (2R,3S) which is same as (2S,3R)</li>
+                            <li>Thus answer is 3 → Option B</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> For molecules with two identical chiral centers: stereoisomers = 3 (two enantiomers + one meso). Remember this pattern!</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Molecules with plane of symmetry are achiral (optically inactive)</li>
+                        <li>Maximum stereoisomers = 2ⁿ (n = chiral centers) unless meso forms exist</li>
+                        <li>Cis-trans isomers are diastereomers (not enantiomers)</li>
+                        <li>Racemic mixture has equal enantiomers = zero optical rotation</li>
+                        <li>Enantiomers have identical physical properties except optical rotation</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (5/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the difference between stereoisomers and constitutional isomers?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Constitutional isomers have different connectivity (atoms connected differently). Stereoisomers have same connectivity but different spatial arrangement. Example: Butane and isobutane are constitutional isomers. cis- and trans-but-2-ene are stereoisomers.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can a molecule have chiral centers but still be achiral?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Yes, if it has a plane of symmetry. Such compounds are called meso compounds. Example: meso-tartaric acid has two chiral centers but is optically inactive due to internal compensation (plane of symmetry).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why do enantiomers rotate plane-polarized light equally but in opposite directions?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Because they are mirror images. Their interaction with chiral environment (polarized light) is opposite. One rotates light clockwise (+), the other counterclockwise (-). Magnitude of rotation is same because molecular structures are identical except for handedness.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is a racemic mixture?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> A 1:1 mixture of two enantiomers. It shows zero optical rotation because rotations cancel. Racemic mixtures can often be separated by reaction with chiral reagents (resolution). Many drugs are racemic mixtures.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How can you distinguish between enantiomers and diastereomers experimentally?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Enantiomers have identical physical properties (MP, BP, solubility) except interaction with polarized light or chiral environments. Diastereomers have different physical properties and can be separated by normal methods like distillation or chromatography.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Stereoisomerism MCQs Progress</div>
+                    <div class="progress-stats"><span id="intro-completed">0</span>/6 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intro-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-atom"></i> Stereoisomerism MCQs (6)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intro">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intro-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Geometrical Isomerism Tab -->
+        <div class="tab-content" id="geo-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="explanation-title">Geometrical Isomerism (Cis-Trans Isomerism)</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Geometrical Isomerism?</h4>
+                    <p><strong>Geometrical isomerism</strong> occurs due to restricted rotation around a bond, most commonly:</p>
+                    <ol>
+                        <li><strong>Double bonds (C=C):</strong> π-bond prevents rotation</li>
+                        <li><strong>Cyclic compounds:</strong> Ring structure restricts rotation</li>
+                        <li><strong>Coordination complexes:</strong> In square planar or octahedral complexes</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Cis vs Trans</div>
+                        <p><strong>Cis:</strong> Similar groups on same side of double bond/ring<br>
+                        <strong>Trans:</strong> Similar groups on opposite sides<br>
+                        For alkenes: Both carbons must have two different groups for geometrical isomerism.</p>
+                    </div>
+                    
+                    <div class="isomer-pair">
+                        <div class="isomer-box">
+                            <strong>cis-But-2-ene</strong><br>
+                            CH₃ - CH₃<br>
+                            &nbsp;&nbsp;C=C<br>
+                            H &nbsp;&nbsp;&nbsp;&nbsp;H<br>
+                            (Same side)
+                        </div>
+                        <div class="isomer-box">
+                            <strong>trans-But-2-ene</strong><br>
+                            CH₃ &nbsp;&nbsp;&nbsp;&nbsp;H<br>
+                            &nbsp;&nbsp;C=C<br>
+                            H &nbsp;&nbsp;&nbsp;&nbsp;CH₃<br>
+                            (Opposite sides)
+                        </div>
+                    </div>
+                    
+                    <h4>Conditions for Geometrical Isomerism:</h4>
+                    <ol>
+                        <li><strong>For alkenes:</strong> Each carbon of double bond must have two different groups</li>
+                        <li><strong>For cyclic compounds:</strong> At least two carbons in ring must have two different substituents</li>
+                        <li><strong>For oximes (C=N):</strong> Syn and anti isomers possible</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: E/Z Nomenclature</div>
+                        <p>When all four groups are different, cis/trans naming fails. Use E/Z system:<br>
+                        <strong>E (Entgegen):</strong> Higher priority groups on opposite sides (German: "opposite")<br>
+                        <strong>Z (Zusammen):</strong> Higher priority groups on same side (German: "together")<br>
+                        Priority determined by Cahn-Ingold-Prelog rules (atomic number).</p>
+                    </div>
+                    
+                    <h4>MDCAT Problem Solving Strategy:</h4>
+                    <ol>
+                        <li>Check if molecule has double bond or ring</li>
+                        <li>Verify each carbon of double bond has two different groups</li>
+                        <li>Draw both possible arrangements</li>
+                        <li>Check if they are non-superimposable (different molecules)</li>
+                        <li>For cyclic compounds: draw chair conformations if needed</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which compound will show geometrical isomerism?</p>
+                        <p><strong>Options:</strong> A) Propene, B) 1-Butene, C) 2-Butene, D) 2-Methylpropene</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Geometrical isomerism requires restricted rotation (double bond or ring)</li>
+                            <li>All options are alkenes, so check condition: each carbon of double bond must have two different groups</li>
+                            <li>A) Propene (CH₃-CH=CH₂): One carbon has two H's → No</li>
+                            <li>B) 1-Butene (CH₃-CH₂-CH=CH₂): One carbon has two H's → No</li>
+                            <li>C) 2-Butene (CH₃-CH=CH-CH₃): Both carbons have CH₃ and H → Yes</li>
+                            <li>D) 2-Methylpropene (CH₃)₂C=CH₂: One carbon has two CH₃ → No</li>
+                            <li>Thus answer is C → 2-Butene</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Quick check: For alkene "aC=Cb", if a≠b on both sides, geometrical isomers exist. If any carbon has two identical groups, no geometrical isomerism.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Maleic acid (cis) and fumaric acid (trans) are classic examples</li>
+                        <li>Cis isomers usually have higher boiling point (more polar)</li>
+                        <li>Trans isomers usually more stable (less steric hindrance)</li>
+                        <li>Cyclohexane derivatives show geometrical isomerism</li>
+                        <li>Oximes show syn-anti isomerism (C=N-OH)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (10/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why does but-2-ene show geometrical isomerism while but-1-ene does not?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> But-2-ene: CH₃-CH=CH-CH₃. Both carbons of double bond have two different groups (H and CH₃). But-1-ene: CH₃-CH₂-CH=CH₂. The terminal carbon has two H atoms, so it doesn't meet the condition for geometrical isomerism.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are trans isomers generally more stable than cis isomers?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Trans isomers have bulky groups farther apart → less steric hindrance → more stable. Cis isomers have bulky groups close → steric repulsion → less stable. Example: trans-but-2-ene is 4 kJ/mol more stable than cis-but-2-ene.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can geometrical isomers be separated by distillation?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Yes, because they are diastereomers with different physical properties (BP, MP, polarity). Unlike enantiomers which have identical physical properties, geometrical isomers can be separated by normal physical methods.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Geometrical Isomerism MCQs Progress</div>
+                    <div class="progress-stats"><span id="geo-completed">0</span>/7 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="geo-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-project-diagram"></i> Geometrical Isomerism MCQs (7)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-geo">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="geo-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Optical Isomerism Tab -->
+        <div class="tab-content" id="optical-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="explanation-title">Optical Isomerism and Chirality</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Optical Isomerism?</h4>
+                    <p><strong>Optical isomerism</strong> occurs when molecules are chiral (non-superimposable on their mirror image). Such molecules rotate plane-polarized light and are called <strong>optically active</strong>.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Chirality Requirements</div>
+                        <p>A molecule is chiral if:<br>
+                        1. It has no plane of symmetry<br>
+                        2. It has no center of symmetry<br>
+                        3. It has no alternating axis of symmetry<br>
+                        Most common: Carbon with four different groups (asymmetric carbon/chiral center).</p>
+                    </div>
+                    
+                    <div class="chiral-center">
+                        <strong>Chiral Center Examples:</strong><br>
+                        • Lactic acid: CH₃-CH(OH)-COOH (C* has H, OH, CH₃, COOH)<br>
+                        • Alanine: CH₃-CH(NH₂)-COOH (C* has H, NH₂, CH₃, COOH)<br>
+                        • Glyceraldehyde: CHO-CH(OH)-CH₂OH (C* has H, OH, CHO, CH₂OH)
+                    </div>
+                    
+                    <h4>Optical Activity Measurement:</h4>
+                    <ul>
+                        <li><strong>Specific rotation [α]:</strong> Measured using polarimeter</li>
+                        <li><strong>Dextrorotatory (+):</strong> Rotates light clockwise</li>
+                        <li><strong>Levorotatory (-):</strong> Rotates light counterclockwise</li>
+                        <li><strong>Racemic mixture (±):</strong> Equal mixture of enantiomers → zero rotation</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Molecules Without Chiral Centers</div>
+                        <p>Some molecules are chiral without having chiral carbon:<br>
+                        1. <strong>Allenes:</strong> Cumulated double bonds with different end groups<br>
+                        2. <strong>Spiranes:</strong> Compounds with spiral structure<br>
+                        3. <strong>Biphenyls:</strong> Ortho-substituted with bulky groups (atropisomerism)<br>
+                        4. <strong>Helicenes:</strong> Screw-shaped aromatic compounds</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Important Points:</h4>
+                    <ol>
+                        <li>Chiral molecule must have non-superimposable mirror image</li>
+                        <li>Maximum optical isomers = 2ⁿ (n = chiral centers)</li>
+                        <li>Meso compounds have chiral centers but are achiral (plane of symmetry)</li>
+                        <li>Enantiomers have same physical properties except optical rotation</li>
+                        <li>Diastereomers have different physical properties</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A compound has two chiral centers. How many optical isomers are possible if it has no meso form?</p>
+                        <p><strong>Options:</strong> A) 2, B) 3, C) 4, D) 1</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>General formula: For n chiral centers, maximum optical isomers = 2ⁿ</li>
+                            <li>Here n = 2, so maximum = 2² = 4</li>
+                            <li>The question says "no meso form" so all 4 are distinct</li>
+                            <li>The 4 isomers are: (R,R), (S,S), (R,S), (S,R)</li>
+                            <li>Actually (R,S) and (S,R) are enantiomers if centers are different, but here they are diastereomers</li>
+                            <li>Thus answer is 4 → Option C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember 2ⁿ rule. But always check for meso forms which reduce the count. For two identical chiral centers: 3 isomers (2 enantiomers + 1 meso).</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Chiral molecules are optically active</li>
+                        <li>Achiral molecules are optically inactive</li>
+                        <li>Enantiomers rotate light equally in opposite directions</li>
+                        <li>Racemic mixture shows zero rotation</li>
+                        <li>Meso compounds have plane of symmetry → optically inactive</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (15/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are hands chiral but gloves are not?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> A single hand is chiral (non-superimposable on its mirror image). But a pair of gloves (left + right) together is achiral because the pair has a plane of symmetry. Similarly, a racemic mixture (equal enantiomers) is optically inactive.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can a molecule with one chiral center be meso?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> No. Meso compounds require at least two chiral centers and a plane of symmetry. With one chiral center, the molecule is always chiral (unless other symmetry elements exist, which is rare for carbon compounds).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is the difference between optical isomerism and geometrical isomerism?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Optical isomerism arises from chirality (non-superimposable mirror images). Geometrical isomerism arises from restricted rotation (cis-trans). Optical isomers are enantiomers or diastereomers, while geometrical isomers are always diastereomers.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Optical Isomerism MCQs Progress</div>
+                    <div class="progress-stats"><span id="optical-completed">0</span>/7 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="optical-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-eye"></i> Optical Isomerism MCQs (7)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-optical">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="optical-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Chiral Center Tab -->
+        <div class="tab-content" id="chiral-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="explanation-title">Chiral Center (Asymmetric Carbon)</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is a Chiral Center?</h4>
+                    <p>A <strong>chiral center</strong> (or asymmetric carbon) is a carbon atom bonded to four different atoms or groups. It's the most common source of chirality in organic molecules.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Identifying Chiral Centers</div>
+                        <p>Look for carbon atoms with:<br>
+                        1. Four single bonds (sp³ hybridized)<br>
+                        2. Four different substituents<br>
+                        3. No plane of symmetry passing through it<br>
+                        <strong>Memory trick:</strong> "If all four groups are unique, the carbon is chiral (unless symmetry makes it achiral)."</p>
+                    </div>
+                    
+                    <div class="molecule-diagram">
+                        <strong>Examples of Chiral Centers:</strong><br>
+                        1. Lactic acid: CH₃-C*H(OH)-COOH (* = chiral)<br>
+                        2. Alanine: CH₃-C*H(NH₂)-COOH<br>
+                        3. Glucose: Multiple chiral centers (4 in aldohexoses)<br>
+                        4. Cholesterol: 8 chiral centers
+                    </div>
+                    
+                    <h4>Common Pitfalls in Identification:</h4>
+                    <ol>
+                        <li><strong>Carbon with double/triple bonds:</strong> Not chiral (sp² or sp hybridized)</li>
+                        <li><strong>Prochiral centers:</strong> Can become chiral with substitution</li>
+                        <li><strong>Identical groups but different connectivity:</strong> Still chiral if groups are in different environments</li>
+                        <li><strong>Stereogenic but not chiral:</strong> In meso compounds</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Nitrogen and Phosphorus</div>
+                        <p>Nitrogen in amines can be chiral if it has three different groups and the lone pair acts as fourth "group". However, inversion at nitrogen (umbrella flip) is rapid at room temperature, so enantiomers interconvert. Phosphorus and sulfur compounds can have stable chirality at the heteroatom.</p>
+                    </div>
+                    
+                    <h4>MDCAT Problem Solving Strategy:</h4>
+                    <ol>
+                        <li>Examine each carbon in the molecule</li>
+                        <li>Check if carbon has four different groups</li>
+                        <li>Label chiral centers with asterisks (*)</li>
+                        <li>Count total chiral centers for stereoisomer prediction</li>
+                        <li>Check for symmetry that might make molecule achiral despite chiral centers</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> How many chiral centers are present in cholesterol (C₂₇H₄₆O)?</p>
+                        <p><strong>Options:</strong> A) 5, B) 6, C) 7, D) 8</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Cholesterol structure: Steroid nucleus with OH at C3 and double bond at C5-C6</li>
+                            <li>Chiral centers must be sp³ carbons with four different groups</li>
+                            <li>In steroid skeleton: C3, C8, C9, C10, C13, C14, C17, C20 are chiral</li>
+                            <li>C5 and C6 have double bond → not chiral</li>
+                            <li>Side chain at C17: C20, C22, C23, C24, C25 possible but some are not chiral due to identical groups</li>
+                            <li>Actually: 8 chiral centers total → Option D</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> For complex molecules, look for carbons at ring junctions and side chain branching points. These are often chiral if they have four different substituents.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Carbon with two identical groups → not chiral</li>
+                        <li>Carbon in CH₂ or CH₃ group → not chiral</li>
+                        <li>Carbon in C=O or C≡N → not chiral</li>
+                        <li>Carbon at ring junction often chiral</li>
+                        <li>Maximum stereoisomers = 2ⁿ (n = chiral centers)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (20/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can a carbon with four different isotopes be chiral?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Yes, in principle. If a carbon has four different isotopes (e.g., ¹²C, ¹³C, ¹⁴C with different hydrogens), it would be chiral. However, such compounds are rare and isotopic differences are too small to show optical activity detectable by normal polarimeters.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is a carbon in a carbonyl group (C=O) not chiral?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Carbonyl carbon is sp² hybridized with trigonal planar geometry. It has only three bonds (to O and two other groups). Even if the two groups are different, the molecule has a plane of symmetry (through C, O, and between the two groups).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is a stereogenic center?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> A stereogenic center is an atom where interchange of two groups produces a stereoisomer. All chiral centers are stereogenic, but not all stereogenic centers create chirality (e.g., in meso compounds). Example: In cis/trans isomers, the double bond is stereogenic but not chiral.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Chiral Center MCQs Progress</div>
+                    <div class="progress-stats"><span id="chiral-completed">0</span>/6 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="chiral-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-star"></i> Chiral Center MCQs (6)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-chiral">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="chiral-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Lactic Acid Tab -->
+        <div class="tab-content" id="lactic-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <div class="explanation-title">Lactic Acid as Chirality Example</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Lactic Acid Structure and Chirality:</h4>
+                    <p><strong>Lactic acid</strong> (2-hydroxypropanoic acid, CH₃-CH(OH)-COOH) is the classic example of a chiral molecule with one chiral center.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Lactic Acid Enantiomers</div>
+                        <p>Lactic acid exists as two enantiomers:<br>
+                        <strong>L-(+)-Lactic acid:</strong> Rotates light clockwise, found in muscles<br>
+                        <strong>D-(-)-Lactic acid:</strong> Rotates light counterclockwise, found in sour milk<br>
+                        The chiral carbon has: H, OH, CH₃, COOH (all different)</p>
+                    </div>
+                    
+                    <div class="isomer-pair">
+                        <div class="isomer-box">
+                            <strong>L-(+)-Lactic Acid</strong><br>
+                            (S)-configuration<br>
+                            [α] = +2.6°<br>
+                            Muscle fatigue product<br>
+                            Biological importance
+                        </div>
+                        <div class="isomer-box">
+                            <strong>D-(-)-Lactic Acid</strong><br>
+                            (R)-configuration<br>
+                            [α] = -2.6°<br>
+                            Bacterial fermentation<br>
+                            Sour milk
+                        </div>
+                    </div>
+                    
+                    <h4>Biological Significance:</h4>
+                    <ul>
+                        <li><strong>Muscle metabolism:</strong> L-(+)-lactic acid accumulates during exercise</li>
+                        <li><strong>Food industry:</strong> D-(-)-lactic acid in yogurt and sour milk</li>
+                        <li><strong>Pharmaceutical:</strong> Only L-form is metabolized by humans</li>
+                        <li><strong>Racemic mixture:</strong> (±)-lactic acid synthesized in lab</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Biological Discrimination</div>
+                        <p>Living organisms distinguish between enantiomers:<br>
+                        • Enzymes are chiral → interact differently with enantiomers<br>
+                        • L-lactic dehydrogenase only metabolizes L-(+)-lactic acid<br>
+                        • D-(-)-lactic acid is toxic if accumulated<br>
+                        This is why chiral drugs must be administered as single enantiomer.</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Important Points:</h4>
+                    <ol>
+                        <li>Lactic acid has one chiral center → two enantiomers</li>
+                        <li>Specific rotation: ±2.6° (modest rotation)</li>
+                        <li>Biological systems produce specific enantiomer</li>
+                        <li>Racemic lactic acid can be resolved</li>
+                        <li>Fischer projection: vertical bonds go back, horizontal come forward</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Lactic acid produced in muscles during exercise is:</p>
+                        <p><strong>Options:</strong> A) Racemic, B) L-(+)-form, C) D-(-)-form, D) Meso form</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Lactic acid from muscle metabolism is enantiomerically pure</li>
+                            <li>Biological systems typically produce one enantiomer</li>
+                            <li>Muscle lactate dehydrogenase produces L-(+)-lactic acid</li>
+                            <li>D-(-)-lactic acid is produced by bacteria (e.g., in yogurt)</li>
+                            <li>Racemic would be synthetic (±)-mixture</li>
+                            <li>Lactic acid has one chiral center → cannot be meso</li>
+                            <li>Thus answer is L-(+)-form → Option B</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Biological systems produce specific enantiomers: L-amino acids, D-sugars, L-lactic acid. Remember "L for Life" (most biological molecules are L-form).</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Lactic acid: CH₃-CH(OH)-COOH</li>
+                        <li>One chiral center → two enantiomers</li>
+                        <li>Muscle: L-(+)-lactic acid</li>
+                        <li>Sour milk: D-(-)-lactic acid</li>
+                        <li>Specific rotation = ±2.6°</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (25/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is lactic acid a good example to explain chirality?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Lactic acid is simple (only 3 carbons), has one clear chiral center, both enantiomers exist in nature with different sources, shows biological specificity, and has measurable optical rotation. It demonstrates all key concepts of chirality without complexity.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can we convert L-lactic acid to D-lactic acid by simple rotation?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> No. To convert enantiomers, bonds must be broken and reformed. Simple rotation cannot convert L to D because they are non-superimposable mirror images. Interconversion requires breaking and making bonds at chiral center.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why does racemic lactic acid show zero optical rotation?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Racemic mixture contains equal amounts of L-(+)- and D-(-)-enantiomers. Their rotations cancel exactly (+2.6° and -2.6° sum to zero). This is external compensation (different molecules) vs internal compensation in meso compounds (same molecule).</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Lactic Acid MCQs Progress</div>
+                    <div class="progress-stats"><span id="lactic-completed">0</span>/7 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="lactic-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-wine-bottle"></i> Lactic Acid MCQs (7)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-lactic">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="lactic-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Optical Activity Tab -->
+        <div class="tab-content" id="activity-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-adjust"></i>
+                    </div>
+                    <div class="explanation-title">Optical Activity Measurement and Significance</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Optical Activity?</h4>
+                    <p><strong>Optical activity</strong> is the ability of chiral molecules to rotate plane-polarized light. Measured using a <strong>polarimeter</strong>.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Specific Rotation Formula</div>
+                        <p>Specific rotation [α] is calculated as:<br>
+                        $[α]^T_λ = \frac{α}{l × c}$<br>
+                        Where:<br>
+                        α = observed rotation (degrees)<br>
+                        l = path length (dm)<br>
+                        c = concentration (g/mL)<br>
+                        T = temperature (°C)<br>
+                        λ = wavelength of light (usually D-line of sodium, 589 nm)</p>
+                    </div>
+                    
+                    <h4>Polarimeter Working:</h4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Polarimeter_schematic.svg/400px-Polarimeter_schematic.svg.png" alt="Polarimeter diagram" style="max-width:100%; height:auto; margin:9.72px 0; border-radius:var(--border-radius);">
+                    <ol>
+                        <li><strong>Light source:</strong> Monochromatic (sodium lamp)</li>
+                        <li><strong>Polarizer:</strong> Creates plane-polarized light</li>
+                        <li><strong>Sample tube:</strong> Contains chiral compound solution</li>
+                        <li><strong>Analyzer:</strong> Rotatable polarizer to measure rotation</li>
+                        <li><strong>Observer:</strong> Detects minimum light intensity</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Exceptional Case: Cotton Effect</div>
+                        <p>Optical rotatory dispersion (ORD): [α] varies with wavelength. For chromophores near chiral center, ORD shows characteristic curves. Circular dichroism (CD): Differential absorption of left vs right circularly polarized light. Used to determine absolute configuration of complex molecules.</p>
+                    </div>
+                    
+                    <h4>Factors Affecting Optical Rotation:</h4>
+                    <table style="width:100%; border-collapse: collapse; margin: 9.72px 0; font-size: 0.486rem;">
+                        <tr style="background: var(--primary); color: white;">
+                            <th style="padding: 4.05px; text-align: left;">Factor</th>
+                            <th style="padding: 4.05px; text-align: left;">Effect</th>
+                            <th style="padding: 4.05px; text-align: left;">MDCAT Importance</th>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Concentration</strong></td>
+                            <td style="padding: 4.05px;">α ∝ c (linear for dilute solutions)</td>
+                            <td style="padding: 4.05px;">Specific rotation is concentration-independent</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Path length</strong></td>
+                            <td style="padding: 4.05px;">α ∝ l (linear)</td>
+                            <td style="padding: 4.05px;">Standard tube length = 1 dm</td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid rgba(0,0,0,0.1);">
+                            <td style="padding: 4.05px;"><strong>Temperature</strong></td>
+                            <td style="padding: 4.05px;">Usually small effect</td>
+                            <td style="padding: 4.05px;">Reported as [α]²⁵D (25°C, D-line)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 4.05px;"><strong>Wavelength</strong></td>
+                            <td style="padding: 4.05px;">[α] varies with λ (dispersion)</td>
+                            <td style="padding: 4.05px;">D-line standard (589 nm)</td>
+                        </tr>
+                    </table>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> A solution of 2.0 g of chiral compound in 10 mL water shows +6° rotation in 2 dm tube. Specific rotation is:</p>
+                        <p><strong>Options:</strong> A) +15°, B) +30°, C) +60°, D) +120°</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Formula: [α] = α/(l × c)</li>
+                            <li>Given: α = +6°, l = 2 dm, mass = 2.0 g, volume = 10 mL</li>
+                            <li>Concentration c = mass/volume = 2.0 g / 10 mL = 0.2 g/mL</li>
+                            <li>[α] = 6° / (2 × 0.2) = 6° / 0.4 = 15°</li>
+                            <li>Thus specific rotation = +15° → Option A</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember formula: [α] = α/(l×c). Units: l in dm, c in g/mL. Double-check concentration calculation: c = mass/volume (not mass/solvent).</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Specific rotation is intensive property (independent of concentration)</li>
+                        <li>Dextrorotatory (+): clockwise rotation</li>
+                        <li>Levorotatory (-): counterclockwise rotation</li>
+                        <li>Racemic mixture: zero rotation</li>
+                        <li>Meso compound: zero rotation</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Optical Activity MCQs Progress</div>
+                    <div class="progress-stats"><span id="activity-completed">0</span>/7 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="activity-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-adjust"></i> Optical Activity MCQs (7)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-activity">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="activity-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 40 MCQs Tab -->
+        <div class="tab-content" id="forty-mcqs-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="explanation-title">40 MCQs on Stereoisomerism - Complete Set</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Comprehensive MCQ Coverage:</h4>
+                    <p>This section contains 40 MCQs covering all aspects of Stereoisomerism as per Pakistani MDCAT, NUMS, HEC, and AKU syllabus. Questions are categorized by difficulty: Basic (15), Intermediate (15), Advanced (10).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy for Exams</div>
+                        <ol>
+                            <li><strong>Identify chiral centers first:</strong> Look for carbons with 4 different groups</li>
+                            <li><strong>Check for symmetry:</strong> Plane of symmetry → achiral (meso or not chiral)</li>
+                            <li><strong>Count stereoisomers:</strong> 2ⁿ rule (n = chiral centers) but deduct meso forms</li>
+                            <li><strong>Geometrical isomerism:</strong> Check double bonds and rings</li>
+                            <li><strong>Optical activity:</strong> Chiral + no racemization → optically active</li>
+                            <li><strong>Time management:</strong> 1-1.5 minutes per MCQ maximum</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Common MCQ Patterns in Pakistani Exams:</h4>
+                    <ul>
+                        <li><strong>Counting chiral centers:</strong> "How many chiral carbons in X?"</li>
+                        <li><strong>Stereoisomer count:</strong> "How many stereoisomers for Y?"</li>
+                        <li><strong>Geometrical isomerism:</strong> "Which shows cis-trans isomerism?"</li>
+                        <li><strong>Optical activity:</strong> "Which is optically active?"</li>
+                        <li><strong>Meso compounds:</strong> "Identify meso compound"</li>
+                        <li><strong>Specific rotation:</strong> Calculation problems</li>
+                        <li><strong>Biological significance:</strong> "Which enantiomer is biologically active?"</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Advanced Level: Competition Exam Tricks</div>
+                        <p><strong>Axial chirality:</strong> Allenes, biphenyls, spiranes.<br>
+                        <strong>Helicity:</strong> Helicenes show helical chirality.<br>
+                        <strong>Atropisomerism:</strong> Restricted rotation in biphenyls.<br>
+                        <strong>Prochirality:</strong> Identifying pro-R and pro-S groups.<br>
+                        <strong>Dynamic stereochemistry:</strong> Ring inversion, nitrogen inversion.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example (Advanced Level):</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample Advanced MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which compound can show optical activity without any chiral carbon?</p>
+                        <p><strong>Options:</strong> A) 1,2-Dichloroethane, B) 1,3-Dichloropropane, C) 1,3-Dichloroallene, D) 1,2-Dichlorocyclopropane</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Option A: CH₂Cl-CH₂Cl - no chiral carbon, free rotation → achiral</li>
+                            <li>Option B: CH₂Cl-CH₂-CH₂Cl - no chiral carbon, flexible → achiral</li>
+                            <li>Option C: 1,3-Dichloroallene: ClHC=C=CHCl - allene with different end groups → chiral without chiral carbon</li>
+                            <li>Option D: 1,2-Dichlorocyclopropane: cyclopropane with two Cl on adjacent carbons - has chiral centers if substituents different</li>
+                            <li>Correct answer: C (allene shows axial chirality)</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Remember molecules without chiral centers that can be chiral: allenes (C=C=C), biphenyls (ortho-substituted), spiranes, helicenes. These show axial or planar chirality.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">40 MCQs Progress</div>
+                    <div class="progress-stats"><span id="forty-completed">0</span>/40 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="forty-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-question-circle"></i> 40 Stereoisomerism MCQs</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-forty">
+                            <i class="fas fa-sync-alt"></i> Refresh All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="forty-mcqs-container">
+                    <!-- 40 MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 40 MCQs and 25 Conceptual Q&A. Detailed breakdown:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/40 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Stereoisomerism Fundamentals</div>
+                                    <div class="progress-stats"><span id="intro-summary">0</span>/6</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intro-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Geometrical Isomerism</div>
+                                    <div class="progress-stats"><span id="geo-summary">0</span>/7</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="geo-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Optical Isomerism</div>
+                                    <div class="progress-stats"><span id="optical-summary">0</span>/7</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="optical-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Chiral Center</div>
+                                    <div class="progress-stats"><span id="chiral-summary">0</span>/6</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="chiral-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Lactic Acid Example</div>
+                                    <div class="progress-stats"><span id="lactic-summary">0</span>/7</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="lactic-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Optical Activity</div>
+                                    <div class="progress-stats"><span id="activity-summary">0</span>/7</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="activity-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">40 MCQs Set</div>
+                                    <div class="progress-stats"><span id="forty-summary">0</span>/40</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="forty-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Stereoisomerism MCQs Portal. MDCAT | NUMS | HEC | AKU | Competition Exam Preparation.</p>
+                <p>Complete coverage with 40 MCQs, 25 Conceptual Q&A, and detailed explanations for Pakistani students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Stereoisomerism MCQ Data - 40 MCQs total + 40 topic MCQs = 80 total
+        const stereoisomerismMCQs = {
+            intro: [
+                {
+                    id: 1,
+                    question: "Stereoisomers differ from constitutional isomers in:",
+                    options: ["Connectivity of atoms", "Spatial arrangement", "Molecular formula", "Functional groups"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Option A (Wrong):</strong> Constitutional isomers differ in connectivity.<br><strong>Option B (Correct):</strong> Stereoisomers have same connectivity but different spatial arrangement.<br><strong>Option C (Wrong):</strong> Both have same molecular formula.<br><strong>Option D (Wrong):</strong> May have same functional groups."
+                },
+                {
+                    id: 2,
+                    question: "Maximum number of stereoisomers for a compound with 3 different chiral centers is:",
+                    options: ["3", "6", "8", "9"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Formula:</strong> Maximum stereoisomers = 2ⁿ where n = chiral centers.<br>Here n = 3, so 2³ = 8 stereoisomers.<br>This assumes no meso forms and all chiral centers are different."
+                },
+                {
+                    id: 3,
+                    question: "Which is NOT a type of stereoisomerism?",
+                    options: ["Geometrical", "Optical", "Position", "Conformational"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Option A:</strong> Geometrical isomerism (cis-trans) IS stereoisomerism.<br><strong>Option B:</strong> Optical isomerism (enantiomers) IS stereoisomerism.<br><strong>Option C (Correct):</strong> Position isomerism is constitutional isomerism, not stereoisomerism.<br><strong>Option D:</strong> Conformational isomerism IS stereoisomerism (though usually not separable)."
+                },
+                {
+                    id: 4,
+                    question: "A meso compound is:",
+                    options: ["Always optically active", "Racemic mixture", "Optically inactive due to internal compensation", "Has no chiral centers"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Option A (Wrong):</strong> Meso compounds are optically inactive.<br><strong>Option B (Wrong):</strong> Racemic is mixture, meso is single compound.<br><strong>Option C (Correct):</strong> Meso has chiral centers but plane of symmetry → internal compensation.<br><strong>Option D (Wrong):</strong> Meso has chiral centers but they are internally compensated."
+                },
+                {
+                    id: 5,
+                    question: "Enantiomers have identical properties except:",
+                    options: ["Boiling point", "Melting point", "Interaction with plane-polarized light", "Density"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Options A, B, D (Wrong):</strong> Enantiomers have identical physical properties in achiral environment.<br><strong>Option C (Correct):</strong> Enantiomers rotate plane-polarized light equally in opposite directions."
+                },
+                {
+                    id: 6,
+                    question: "A compound with plane of symmetry is:",
+                    options: ["Always chiral", "Always optically active", "Always achiral", "Always meso"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Option A (Wrong):</strong> Chiral molecules have NO plane of symmetry.<br><strong>Option B (Wrong):</strong> Optically active molecules are chiral.<br><strong>Option C (Correct):</strong> Plane of symmetry → achiral (may or may not be meso).<br><strong>Option D (Wrong):</strong> Meso is specific case with chiral centers but plane of symmetry."
+                }
+            ],
+            geo: [
+                {
+                    id: 1,
+                    question: "Geometrical isomerism is shown by:",
+                    options: ["Propene", "1-Butene", "2-Butene", "2-Methylpropene"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Option A:</strong> Propene (CH₃-CH=CH₂) - one carbon has two H's → no.<br><strong>Option B:</strong> 1-Butene (CH₃-CH₂-CH=CH₂) - terminal carbon has two H's → no.<br><strong>Option C (Correct):</strong> 2-Butene (CH₃-CH=CH-CH₃) - both carbons have H and CH₃ → yes.<br><strong>Option D:</strong> 2-Methylpropene (CH₃)₂C=CH₂ - one carbon has two CH₃ → no."
+                },
+                {
+                    id: 2,
+                    question: "Maleic acid and fumaric acid are:",
+                    options: ["Enantiomers", "Diastereomers", "Identical", "Constitutional isomers"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Option A (Wrong):</strong> Not mirror images.<br><strong>Option B (Correct):</strong> cis-trans isomers of butenedioic acid → diastereomers.<br><strong>Option C (Wrong):</strong> Different compounds with different properties.<br><strong>Option D (Wrong):</strong> Same connectivity, different spatial arrangement."
+                },
+                {
+                    id: 3,
+                    question: "For geometrical isomerism in alkenes, each carbon of double bond must have:",
+                    options: ["Two identical groups", "Three different groups", "Two different groups", "Four different groups"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Condition:</strong> For alkene aC=Cb, if a≠b on both carbons → geometrical isomerism.<br>Each carbon must have two different groups (not necessarily all four groups different)."
+                },
+                {
+                    id: 4,
+                    question: "E-Z system is used when:",
+                    options: ["Only two groups are different", "All four groups are different", "Molecule is cyclic", "Compound is optically active"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Cis-trans fails</strong> when all four groups are different. E-Z uses Cahn-Ingold-Prelog priority rules.<br>E = higher priority groups opposite, Z = higher priority groups together."
+                },
+                {
+                    id: 5,
+                    question: "Which compound can show syn-anti isomerism?",
+                    options: ["Aldehyde", "Ketone", "Oxime", "Alcohol"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Oximes (C=N-OH)</strong> show syn-anti isomerism due to restricted rotation around C=N bond.<br>Syn: OH and R on same side of C=N.<br>Anti: OH and R on opposite sides."
+                },
+                {
+                    id: 6,
+                    question: "Trans isomers are generally more stable than cis because:",
+                    options: ["Higher polarity", "Lower melting point", "Less steric hindrance", "More hydrogen bonding"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Trans has bulky groups farther apart</strong> → less steric repulsion → more stable.<br>Cis has bulky groups close → steric strain → less stable."
+                },
+                {
+                    id: 7,
+                    question: "Geometrical isomers can be separated by:",
+                    options: ["Distillation", "Crystallization", "Both A and B", "Cannot be separated"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Geometrical isomers are diastereomers</strong> with different physical properties.<br>They can be separated by normal methods like distillation, crystallization, chromatography."
+                }
+            ],
+            optical: [
+                {
+                    id: 1,
+                    question: "Optical activity is shown by:",
+                    options: ["Achiral molecules", "Chiral molecules", "Meso compounds", "Racemic mixtures"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Only chiral molecules</strong> (non-superimposable mirror images) rotate plane-polarized light.<br>Achiral, meso, and racemic mixtures are optically inactive."
+                },
+                {
+                    id: 2,
+                    question: "A compound with two different chiral centers can have maximum optical isomers:",
+                    options: ["2", "3", "4", "6"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Maximum = 2ⁿ</strong> where n = chiral centers.<br>For n=2, maximum = 4 optical isomers.<br>This assumes no meso forms (which would reduce count)."
+                },
+                {
+                    id: 3,
+                    question: "Which is true about enantiomers?",
+                    options: ["Have different boiling points", "Rotate light equally in opposite directions", "Can be separated by simple distillation", "Have different specific rotations"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Enantiomers have identical physical properties</strong> except interaction with chiral environment.<br>They rotate light equally in opposite directions → specific rotation equal in magnitude, opposite in sign."
+                },
+                {
+                    id: 4,
+                    question: "A racemic mixture is:",
+                    options: ["Optically active", "Single compound", "1:1 mixture of enantiomers", "Always meso"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Racemic mixture = (±)-mixture</strong> = equal amounts of two enantiomers.<br>Optically inactive due to external compensation.<br>Not a single compound (it's a mixture)."
+                },
+                {
+                    id: 5,
+                    question: "Meso-tartaric acid is optically inactive because:",
+                    options: ["No chiral centers", "External compensation", "Internal compensation", "Rapid interconversion"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Meso compounds have chiral centers</strong> but plane of symmetry.<br>Two halves of molecule rotate light equally in opposite directions → internal compensation within same molecule."
+                },
+                {
+                    id: 6,
+                    question: "Diastereomers differ from enantiomers in:",
+                    options: ["Being mirror images", "Having different physical properties", "Rotating light equally", "Having same configuration at all centers"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Diastereomers are NOT mirror images</strong> and have different physical properties.<br>Enantiomers ARE mirror images and have identical physical properties (except optical rotation)."
+                },
+                {
+                    id: 7,
+                    question: "A molecule can be chiral without chiral centers in case of:",
+                    options: ["Methane", "Allene with different end groups", "Ethane", "Cyclohexane"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Allenes (C=C=C)</strong> with different substituents on end carbons show axial chirality without chiral carbon.<br>Other examples: biphenyls, spiranes, helicenes."
+                }
+            ],
+            chiral: [
+                {
+                    id: 1,
+                    question: "A chiral center carbon must have:",
+                    options: ["Four identical groups", "Three identical groups", "Four different groups", "A double bond"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Chiral center (asymmetric carbon):</strong> sp³ carbon with four different substituents.<br>If any two groups are same → not chiral center."
+                },
+                {
+                    id: 2,
+                    question: "How many chiral centers in glucose (aldohexose)?",
+                    options: ["2", "3", "4", "5"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Aldohexoses like glucose have 4 chiral centers</strong> (C2, C3, C4, C5).<br>C1 is aldehyde, C6 is CH₂OH (not chiral).<br>Total stereoisomers = 2⁴ = 16 (8 D and 8 L pairs)."
+                },
+                {
+                    id: 3,
+                    question: "Which carbon in lactic acid (CH₃-CH(OH)-COOH) is chiral?",
+                    options: ["Carbonyl carbon", "Methyl carbon", "Hydroxy-bearing carbon", "All carbons"],
+                    correctAnswer: 2,
+                    explanation: "<strong>C2 (CH(OH)) is chiral</strong> - bonded to H, OH, CH₃, COOH (all different).<br>C1 (COOH) is carbonyl (sp²) → not chiral.<br>C3 (CH₃) has three H's → not chiral."
+                },
+                {
+                    id: 4,
+                    question: "A compound with n chiral centers has maximum stereoisomers:",
+                    options: ["n", "2n", "2ⁿ", "n²"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Maximum stereoisomers = 2ⁿ</strong> where n = chiral centers.<br>This includes all enantiomers and diastereomers.<br>Meso forms reduce this number."
+                },
+                {
+                    id: 5,
+                    question: "Which cannot be a chiral center?",
+                    options: ["sp³ carbon with four different groups", "sp² carbon in alkene", "Tertiary nitrogen with three different groups", "Phosphorus with four different groups"],
+                    correctAnswer: 1,
+                    explanation: "<strong>sp² carbons are trigonal planar</strong> → have plane of symmetry → cannot be chiral centers.<br>Nitrogen can be chiral but rapid inversion at room temp.<br>Phosphorus can have stable chirality."
+                },
+                {
+                    id: 6,
+                    question: "Cholesterol has how many chiral centers?",
+                    options: ["5", "6", "7", "8"],
+                    correctAnswer: 3,
+                    explanation: "<strong>Cholesterol has 8 chiral centers:</strong> C3, C8, C9, C10, C13, C14, C17, C20.<br>Double bond at C5-C6 eliminates chirality at those positions."
+                }
+            ],
+            lactic: [
+                {
+                    id: 1,
+                    question: "Lactic acid from muscle fatigue is:",
+                    options: ["D-(-)-form", "L-(+)-form", "Racemic", "Meso"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Muscle produces L-(+)-lactic acid</strong> during anaerobic respiration.<br>D-(-)-lactic acid is from bacterial fermentation (yogurt, sour milk)."
+                },
+                {
+                    id: 2,
+                    question: "Specific rotation of pure L-(+)-lactic acid is approximately:",
+                    options: ["+2.6°", "-2.6°", "+26°", "0°"],
+                    correctAnswer: 0,
+                    explanation: "<strong>[α] of L-(+)-lactic acid = +2.6°</strong><br>D-(-)-lactic acid = -2.6°<br>Racemic mixture = 0°"
+                },
+                {
+                    id: 3,
+                    question: "Lactic acid enantiomers have:",
+                    options: ["Different molecular formulas", "Different functional groups", "Different spatial arrangement", "Different connectivity"],
+                    correctAnswer: 2,
+                    explanation: "<strong>Enantiomers have same:</strong> molecular formula, connectivity, functional groups.<br>They differ ONLY in spatial arrangement (non-superimposable mirror images)."
+                },
+                {
+                    id: 4,
+                    question: "Racemic lactic acid can be resolved by:",
+                    options: ["Simple distillation", "Reaction with chiral reagent", "Crystallization without additives", "All of these"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Racemic resolution</strong> typically uses chiral reagent to form diastereomers with different properties, then separate.<br>Simple methods fail because enantiomers have identical physical properties."
+                },
+                {
+                    id: 5,
+                    question: "Lactic acid structure is:",
+                    options: ["CH₃-CH₂-COOH", "CH₃-CH(OH)-COOH", "HOOC-CH₂-COOH", "CH₂(OH)-CH₂-COOH"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Lactic acid = 2-hydroxypropanoic acid</strong> = CH₃-CH(OH)-COOH.<br>Chiral center at C2 with H, OH, CH₃, COOH."
+                },
+                {
+                    id: 6,
+                    question: "Biological systems typically produce:",
+                    options: ["Racemic mixtures", "Single enantiomers", "Meso compounds", "Diastereomeric mixtures"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Enzymes are chiral</strong> → produce specific enantiomers.<br>Examples: L-amino acids, D-sugars, L-lactic acid.<br>This is why chiral drugs often need to be single enantiomer."
+                },
+                {
+                    id: 7,
+                    question: "The two enantiomers of lactic acid are:",
+                    options: ["Identical compounds", "Constitutional isomers", "Diastereomers", "Mirror images"],
+                    correctAnswer: 3,
+                    explanation: "<strong>Enantiomers = non-superimposable mirror images</strong>.<br>They have identical physical properties except optical rotation direction."
+                }
+            ],
+            activity: [
+                {
+                    id: 1,
+                    question: "Specific rotation [α] is calculated as:",
+                    options: ["α × l × c", "α/(l × c)", "l × c/α", "(α × c)/l"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Formula: [α] = α/(l × c)</strong><br>α = observed rotation (°)<br>l = path length (dm)<br>c = concentration (g/mL)"
+                },
+                {
+                    id: 2,
+                    question: "A compound showing +30° rotation is called:",
+                    options: ["Levorotatory", "Dextrorotatory", "Meso", "Racemic"],
+                    correctAnswer: 1,
+                    explanation: "<strong>+ = dextrorotatory</strong> (rotates plane clockwise).<br>- = levorotatory (rotates counterclockwise)."
+                },
+                {
+                    id: 3,
+                    question: "Standard conditions for specific rotation measurement:",
+                    options: ["25°C, D-line", "0°C, UV light", "100°C, white light", "Any temperature, any wavelength"],
+                    correctAnswer: 0,
+                    explanation: "<strong>Reported as [α]²⁵D</strong>: at 25°C, using sodium D-line (589 nm).<br>Temperature and wavelength affect rotation, so standardization is needed."
+                },
+                {
+                    id: 4,
+                    question: "A solution shows 0° rotation. It could be:",
+                    options: ["Pure enantiomer", "Racemic mixture", "Meso compound", "Both B and C"],
+                    correctAnswer: 3,
+                    explanation: "<strong>Zero rotation possible for:</strong><br>1. Racemic mixture (external compensation)<br>2. Meso compound (internal compensation)<br>3. Achiral compound (no chirality)<br>Pure enantiomer always shows rotation."
+                },
+                {
+                    id: 5,
+                    question: "If concentration doubles, observed rotation:",
+                    options: ["Doubles", "Halves", "Same", "Quadruples"],
+                    correctAnswer: 0,
+                    explanation: "<strong>α ∝ c</strong> (for dilute solutions).<br>Double concentration → double observed rotation.<br>Specific rotation [α] = α/(l×c) remains constant."
+                },
+                {
+                    id: 6,
+                    question: "Instrument to measure optical rotation is:",
+                    options: ["Spectrophotometer", "Polarimeter", "Refractometer", "Colorimeter"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Polarimeter measures optical rotation.</strong><br>Consists of light source, polarizer, sample tube, analyzer, detector."
+                },
+                {
+                    id: 7,
+                    question: "Specific rotation of sucrose is +66.5°. A 10% solution in 2 dm tube shows rotation:",
+                    options: ["+6.65°", "+13.3°", "+33.25°", "+66.5°"],
+                    correctAnswer: 1,
+                    explanation: "<strong>Calculation:</strong> α = [α] × l × c = 66.5 × 2 × 0.1 = 13.3°<br>10% solution = 10 g/100 mL = 0.1 g/mL<br>l = 2 dm<br>Thus α = +13.3°"
+                }
+            ],
+            forty: [
+                {
+                    id: 1,
+                    question: "Maximum stereoisomers for compound with 4 different chiral centers:",
+                    options: ["4", "8", "16", "32"],
+                    correctAnswer: 2,
+                    explanation: "2ⁿ where n=4 → 2⁴ = 16 stereoisomers (8 pairs of enantiomers)."
+                },
+                {
+                    id: 2,
+                    question: "Which shows geometrical isomerism?",
+                    options: ["CH₃CH=CH₂", "CH₃CH=CHCH₃", "(CH₃)₂C=CH₂", "CH₂=CH₂"],
+                    correctAnswer: 1,
+                    explanation: "2-Butene (CH₃CH=CHCH₃) has two different groups on each carbon of double bond → cis-trans isomers."
+                },
+                {
+                    id: 3,
+                    question: "A compound with plane of symmetry is:",
+                    options: ["Always optically active", "Always chiral", "Always achiral", "Always racemic"],
+                    correctAnswer: 2,
+                    explanation: "Plane of symmetry → achiral (may be meso or simply achiral)."
+                },
+                {
+                    id: 4,
+                    question: "Enantiomers rotate plane-polarized light:",
+                    options: ["Equally in same direction", "Equally in opposite directions", "Differently in same direction", "One rotates, other doesn't"],
+                    correctAnswer: 1,
+                    explanation: "Enantiomers have equal magnitude but opposite sign of rotation."
+                },
+                {
+                    id: 5,
+                    question: "Meso-tartaric acid has:",
+                    options: ["No chiral centers", "Chiral centers but optically inactive", "One chiral center", "Different functional groups"],
+                    correctAnswer: 1,
+                    explanation: "Meso compounds have chiral centers but plane of symmetry → internal compensation → optically inactive."
+                },
+                {
+                    id: 6,
+                    question: "Racemic mixture is:",
+                    options: ["Optically active", "Single compound", "1:1 mixture of enantiomers", "Mixture of diastereomers"],
+                    correctAnswer: 2,
+                    explanation: "Racemic = (±) = equal enantiomers → net rotation zero."
+                },
+                {
+                    id: 7,
+                    question: "Chiral molecules are:",
+                    options: ["Superimposable on mirror image", "Non-superimposable on mirror image", "Always have plane of symmetry", "Always optically inactive"],
+                    correctAnswer: 1,
+                    explanation: "Chirality definition: non-superimposable mirror images."
+                },
+                {
+                    id: 8,
+                    question: "D- and L-glyceraldehyde are:",
+                    options: ["Diastereomers", "Enantiomers", "Identical", "Constitutional isomers"],
+                    correctAnswer: 1,
+                    explanation: "D and L forms of glyceraldehyde are enantiomers (mirror images)."
+                },
+                {
+                    id: 9,
+                    question: "Which has chiral centers?",
+                    options: ["Methane", "Ethanol", "Lactic acid", "Benzene"],
+                    correctAnswer: 2,
+                    explanation: "Lactic acid (CH₃-CH(OH)-COOH) has chiral carbon at C2."
+                },
+                {
+                    id: 10,
+                    question: "Optical isomers that are not mirror images are:",
+                    options: ["Enantiomers", "Diastereomers", "Identical", "Meso"],
+                    correctAnswer: 1,
+                    explanation: "Diastereomers = stereoisomers not mirror images."
+                },
+                {
+                    id: 11,
+                    question: "A carbon with four different groups is:",
+                    options: ["Always chiral", "Chiral if no symmetry", "Never chiral", "Always optically active"],
+                    correctAnswer: 1,
+                    explanation: "Four different groups necessary but not sufficient. Must also lack symmetry elements."
+                },
+                {
+                    id: 12,
+                    question: "Cis-trans isomers are:",
+                    options: ["Enantiomers", "Diastereomers", "Identical", "Conformers"],
+                    correctAnswer: 1,
+                    explanation: "Geometrical isomers (cis-trans) are diastereomers, not enantiomers."
+                },
+                {
+                    id: 13,
+                    question: "Specific rotation [α] depends on:",
+                    options: ["Concentration", "Path length", "Temperature and wavelength", "All of these"],
+                    correctAnswer: 3,
+                    explanation: "[α] is intensive property but measured under standard conditions (T, λ specified)."
+                },
+                {
+                    id: 14,
+                    question: "Compound with two identical chiral centers can have stereoisomers:",
+                    options: ["2", "3", "4", "6"],
+                    correctAnswer: 1,
+                    explanation: "For two identical chiral centers: 3 stereoisomers (RR, SS, and meso RS/SR)."
+                },
+                {
+                    id: 15,
+                    question: "Which is optically active?",
+                    options: ["Racemic lactic acid", "Meso-tartaric acid", "L-(+)-lactic acid", "1,2-Dichloroethane"],
+                    correctAnswer: 2,
+                    explanation: "Pure enantiomer (L-(+)-lactic acid) is optically active. Others are optically inactive."
+                },
+                {
+                    id: 16,
+                    question: "E-Z notation is based on:",
+                    options: ["Cis-trans", "Priority rules", "Rotation direction", "Molecular weight"],
+                    correctAnswer: 1,
+                    explanation: "E-Z uses Cahn-Ingold-Prelog priority rules to assign configuration."
+                },
+                {
+                    id: 17,
+                    question: "A solution shows +45° rotation. Doubling concentration gives rotation:",
+                    options: ["+22.5°", "+45°", "+90°", "+180°"],
+                    correctAnswer: 2,
+                    explanation: "α ∝ c, so double concentration → double rotation = +90°."
+                },
+                {
+                    id: 18,
+                    question: "Chirality in allenes is due to:",
+                    options: ["Chiral centers", "Axial chirality", "Planar chirality", "Helicity"],
+                    correctAnswer: 1,
+                    explanation: "Allenes show axial chirality when end groups are different."
+                },
+                {
+                    id: 19,
+                    question: "Enantiomers have same:",
+                    options: ["Boiling point", "Specific rotation magnitude", "Interaction with chiral environment", "Both A and B"],
+                    correctAnswer: 3,
+                    explanation: "Enantiomers have identical physical properties (BP, MP, etc.) and equal |[α]| but opposite sign."
+                },
+                {
+                    id: 20,
+                    question: "Diastereomers have different:",
+                    options: ["Molecular formula", "Connectivity", "Physical properties", "Optical rotation sign only"],
+                    correctAnswer: 2,
+                    explanation: "Diastereomers have different physical properties (BP, MP, solubility, etc.)."
+                },
+                {
+                    id: 21,
+                    question: "Meso compounds are optically inactive due to:",
+                    options: ["External compensation", "Internal compensation", "No chirality", "Racemization"],
+                    correctAnswer: 1,
+                    explanation: "Internal compensation within same molecule (plane of symmetry)."
+                },
+                {
+                    id: 22,
+                    question: "Maximum optical isomers for glucose:",
+                    options: ["8", "16", "32", "64"],
+                    correctAnswer: 1,
+                    explanation: "Glucose has 4 chiral centers → 2⁴ = 16 optical isomers (8 D, 8 L)."
+                },
+                {
+                    id: 23,
+                    question: "Fischer projection represents:",
+                    options: ["3D structure in 2D", "Only constitutional isomers", "Only geometrical isomers", "Only conformers"],
+                    correctAnswer: 0,
+                    explanation: "Fischer projection shows 3D chiral molecule in 2D with conventions: vertical lines go back, horizontal come forward."
+                },
+                {
+                    id: 24,
+                    question: "R/S configuration is determined by:",
+                    options: ["Cis-trans", "Priority rules", "Optical rotation sign", "Molecular formula"],
+                    correctAnswer: 1,
+                    explanation: "R/S uses Cahn-Ingold-Prelog priority rules to assign absolute configuration."
+                },
+                {
+                    id: 25,
+                    question: "A compound with [α] = 0° could be:",
+                    options: ["Pure enantiomer", "Racemic mixture", "Meso compound", "Both B and C"],
+                    correctAnswer: 3,
+                    explanation: "Racemic (external compensation) and meso (internal compensation) both show zero rotation."
+                },
+                {
+                    id: 26,
+                    question: "Chiral drugs often need to be administered as single enantiomer because:",
+                    options: ["Cheaper", "More stable", "Different biological activity", "Easier to synthesize"],
+                    correctAnswer: 2,
+                    explanation: "Enantiomers can have different biological activity (one therapeutic, other toxic or inactive)."
+                },
+                {
+                    id: 27,
+                    question: "Thalidomide tragedy was due to:",
+                    options: ["Wrong dosage", "Different enantiomers", "Impurities", "Wrong administration"],
+                    correctAnswer: 1,
+                    explanation: "One enantiomer therapeutic, other teratogenic. Racemic thalidomide caused birth defects."
+                },
+                {
+                    id: 28,
+                    question: "Atropisomerism occurs in:",
+                    options: ["Unsubstituted biphenyl", "Ortho-substituted biphenyls", "Methane", "Ethane"],
+                    correctAnswer: 1,
+                    explanation: "Bulky ortho substituents in biphenyls prevent rotation → atropisomers (enantiomers if no symmetry)."
+                },
+                {
+                    id: 29,
+                    question: "A compound with 3 chiral centers, one meso form possible. Total stereoisomers:",
+                    options: ["6", "7", "8", "9"],
+                    correctAnswer: 0,
+                    explanation: "Maximum 2³ = 8. One meso reduces by 1 (since meso is one isomer, not pair) → 7 stereoisomers."
+                },
+                {
+                    id: 30,
+                    question: "Specific rotation of 2g compound in 20mL, 2dm tube, α=+8°:",
+                    options: ["+20°", "+40°", "+80°", "+160°"],
+                    correctAnswer: 1,
+                    explanation: "c = 2/20 = 0.1 g/mL. [α] = α/(l×c) = 8/(2×0.1) = 8/0.2 = +40°."
+                },
+                {
+                    id: 31,
+                    question: "Which is true about conformational isomers?",
+                    options: ["Usually separable", "Differ in rotation about single bonds", "Always optically active", "Have different connectivity"],
+                    correctAnswer: 1,
+                    explanation: "Conformers differ by rotation about single bonds, usually not separable at room temperature."
+                },
+                {
+                    id: 32,
+                    question: "A chiral compound always has:",
+                    options: ["Plane of symmetry", "Center of symmetry", "Alternating axis", "Non-superimposable mirror image"],
+                    correctAnswer: 3,
+                    explanation: "Definition of chiral: non-superimposable mirror image."
+                },
+                {
+                    id: 33,
+                    question: "Enantiomeric excess (ee) of 80% means:",
+                    options: ["80% one enantiomer, 20% racemic", "90% one enantiomer, 10% other", "80% one enantiomer, 20% other", "Pure enantiomer"],
+                    correctAnswer: 2,
+                    explanation: "ee = % major - % minor. 80% ee = 90% one enantiomer, 10% other."
+                },
+                {
+                    id: 34,
+                    question: "Resolution of racemate involves:",
+                    options: ["Converting to diastereomers", "Simple distillation", "Using achiral reagent", "All of these"],
+                    correctAnswer: 0,
+                    explanation: "Racemic resolution typically uses chiral reagent to form diastereomers with different properties."
+                },
+                {
+                    id: 35,
+                    question: "Walden inversion involves:",
+                    options: ["Retention of configuration", "Inversion of configuration", "Racemization", "No change"],
+                    correctAnswer: 1,
+                    explanation: "S_N2 reaction proceeds with inversion of configuration at chiral center."
+                },
+                {
+                    id: 36,
+                    question: "A compound with even number of chiral centers can be meso if:",
+                    options: ["Has plane of symmetry", "All centers identical", "Has center of symmetry", "Optically active"],
+                    correctAnswer: 0,
+                    explanation: "Meso requires plane of symmetry dividing molecule into mirror image halves."
+                },
+                {
+                    id: 37,
+                    question: "Specific rotation of sucrose changes with hydrolysis because:",
+                    options: ["Concentration changes", "Products are optically active", "Optical rotation of products different", "All of these"],
+                    correctAnswer: 3,
+                    explanation: "Sucrose hydrolysis gives glucose and fructose with different rotations → observed rotation changes."
+                },
+                {
+                    id: 38,
+                    question: "In polarimeter, plane-polarized light is produced by:",
+                    options: ["Light source", "Polarizer", "Sample tube", "Analyzer"],
+                    correctAnswer: 1,
+                    explanation: "Polarizer creates plane-polarized light from ordinary light."
+                },
+                {
+                    id: 39,
+                    question: "A compound with [α] = +50° is 50% optically pure. Observed rotation of pure enantiomer would be:",
+                    options: ["+25°", "+50°", "+100°", "+200°"],
+                    correctAnswer: 2,
+                    explanation: "50% optical purity means [α] is half of pure enantiomer. So pure enantiomer [α] = +100°."
+                },
+                {
+                    id: 40,
+                    question: "Which technique can determine absolute configuration?",
+                    options: ["Polarimetry", "X-ray crystallography", "Simple distillation", "Titration"],
+                    correctAnswer: 1,
+                    explanation: "X-ray crystallography can determine absolute configuration by locating atoms in crystal."
+                }
+            ]
+        };
+
+        // Progress tracking
+        let progress = {
+            intro: Array(stereoisomerismMCQs.intro.length).fill(false),
+            geo: Array(stereoisomerismMCQs.geo.length).fill(false),
+            optical: Array(stereoisomerismMCQs.optical.length).fill(false),
+            chiral: Array(stereoisomerismMCQs.chiral.length).fill(false),
+            lactic: Array(stereoisomerismMCQs.lactic.length).fill(false),
+            activity: Array(stereoisomerismMCQs.activity.length).fill(false),
+            forty: Array(stereoisomerismMCQs.forty.length).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs
+                loadAllMCQs();
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                document.getElementById('refresh-intro').addEventListener('click', () => loadTopicMCQs('intro'));
+                document.getElementById('refresh-geo').addEventListener('click', () => loadTopicMCQs('geo'));
+                document.getElementById('refresh-optical').addEventListener('click', () => loadTopicMCQs('optical'));
+                document.getElementById('refresh-chiral').addEventListener('click', () => loadTopicMCQs('chiral'));
+                document.getElementById('refresh-lactic').addEventListener('click', () => loadTopicMCQs('lactic'));
+                document.getElementById('refresh-activity').addEventListener('click', () => loadTopicMCQs('activity'));
+                document.getElementById('refresh-forty').addEventListener('click', () => loadTopicMCQs('forty'));
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadAllMCQs() {
+                // Load MCQs for each topic
+                loadTopicMCQs('intro');
+                loadTopicMCQs('geo');
+                loadTopicMCQs('optical');
+                loadTopicMCQs('chiral');
+                loadTopicMCQs('lactic');
+                loadTopicMCQs('activity');
+                loadTopicMCQs('forty');
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                
+                // Randomize order of MCQs for this topic
+                const shuffledMCQs = [...stereoisomerismMCQs[topic]].sort(() => Math.random() - 0.5);
+                
+                shuffledMCQs.forEach(mcq => {
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                });
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `${topic}-mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress[topic][mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-subject">${getTopicName(topic)}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">${String.fromCharCode(65 + index)}) ${option}</div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            progress[topic][mcq.id - 1] = true;
+                            saveProgress();
+                            updateProgress();
+                            
+                            const mcqId = card.querySelector('.mcq-id');
+                            mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                            
+                            optionElements.forEach(option => {
+                                option.style.pointerEvents = 'none';
+                            });
+                            
+                            checkAnswerBtn.disabled = true;
+                            checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                });
+                
+                return card;
+            }
+            
+            function getTopicName(topic) {
+                const names = {
+                    intro: 'Stereoisomerism Fundamentals',
+                    geo: 'Geometrical Isomerism',
+                    optical: 'Optical Isomerism',
+                    chiral: 'Chiral Center',
+                    lactic: 'Lactic Acid Example',
+                    activity: 'Optical Activity',
+                    forty: '40 MCQs Set'
+                };
+                return names[topic] || topic;
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                const introCompleted = progress.intro.filter(Boolean).length;
+                const geoCompleted = progress.geo.filter(Boolean).length;
+                const opticalCompleted = progress.optical.filter(Boolean).length;
+                const chiralCompleted = progress.chiral.filter(Boolean).length;
+                const lacticCompleted = progress.lactic.filter(Boolean).length;
+                const activityCompleted = progress.activity.filter(Boolean).length;
+                const fortyCompleted = progress.forty.filter(Boolean).length;
+                
+                const topicTotal = introCompleted + geoCompleted + opticalCompleted + chiralCompleted + lacticCompleted + activityCompleted;
+                const fortyTotal = fortyCompleted;
+                const totalCompleted = topicTotal + fortyTotal;
+                
+                // Calculate accuracy
+                const totalAttempted = Object.values(progress).flat().filter(x => x !== false).length;
+                const accuracy = totalAttempted > 0 ? Math.round((totalCompleted / totalAttempted) * 100) : 0;
+                
+                // Update stats
+                document.getElementById('completed-mcqs').textContent = totalCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update topic progress
+                document.getElementById('intro-completed').textContent = introCompleted;
+                document.getElementById('intro-progress').style.width = `${(introCompleted / 6) * 100}%`;
+                
+                document.getElementById('geo-completed').textContent = geoCompleted;
+                document.getElementById('geo-progress').style.width = `${(geoCompleted / 7) * 100}%`;
+                
+                document.getElementById('optical-completed').textContent = opticalCompleted;
+                document.getElementById('optical-progress').style.width = `${(opticalCompleted / 7) * 100}%`;
+                
+                document.getElementById('chiral-completed').textContent = chiralCompleted;
+                document.getElementById('chiral-progress').style.width = `${(chiralCompleted / 6) * 100}%`;
+                
+                document.getElementById('lactic-completed').textContent = lacticCompleted;
+                document.getElementById('lactic-progress').style.width = `${(lacticCompleted / 7) * 100}%`;
+                
+                document.getElementById('activity-completed').textContent = activityCompleted;
+                document.getElementById('activity-progress').style.width = `${(activityCompleted / 7) * 100}%`;
+                
+                document.getElementById('forty-completed').textContent = fortyCompleted;
+                document.getElementById('forty-progress').style.width = `${(fortyCompleted / 40) * 100}%`;
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = totalCompleted;
+                document.getElementById('overall-progress').style.width = `${(totalCompleted / 80) * 100}%`;
+                
+                // Update summary
+                document.getElementById('intro-summary').textContent = introCompleted;
+                document.getElementById('geo-summary').textContent = geoCompleted;
+                document.getElementById('optical-summary').textContent = opticalCompleted;
+                document.getElementById('chiral-summary').textContent = chiralCompleted;
+                document.getElementById('lactic-summary').textContent = lacticCompleted;
+                document.getElementById('activity-summary').textContent = activityCompleted;
+                document.getElementById('forty-summary').textContent = fortyCompleted;
+                
+                document.getElementById('intro-summary-progress').style.width = `${(introCompleted / 6) * 100}%`;
+                document.getElementById('geo-summary-progress').style.width = `${(geoCompleted / 7) * 100}%`;
+                document.getElementById('optical-summary-progress').style.width = `${(opticalCompleted / 7) * 100}%`;
+                document.getElementById('chiral-summary-progress').style.width = `${(chiralCompleted / 6) * 100}%`;
+                document.getElementById('lactic-summary-progress').style.width = `${(lacticCompleted / 7) * 100}%`;
+                document.getElementById('activity-summary-progress').style.width = `${(activityCompleted / 7) * 100}%`;
+                document.getElementById('forty-summary-progress').style.width = `${(fortyCompleted / 40) * 100}%`;
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    progress = {
+                        intro: Array(6).fill(false),
+                        geo: Array(7).fill(false),
+                        optical: Array(7).fill(false),
+                        chiral: Array(6).fill(false),
+                        lactic: Array(7).fill(false),
+                        activity: Array(7).fill(false),
+                        forty: Array(40).fill(false)
+                    };
+                    saveProgress();
+                    updateProgress();
+                    loadAllMCQs();
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('stereoisomerismProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('stereoisomerismProgress');
+                if (savedProgress) {
+                    // Ensure all arrays have correct length
+                    progress = {
+                        intro: savedProgress.intro || Array(6).fill(false),
+                        geo: savedProgress.geo || Array(7).fill(false),
+                        optical: savedProgress.optical || Array(7).fill(false),
+                        chiral: savedProgress.chiral || Array(6).fill(false),
+                        lactic: savedProgress.lactic || Array(7).fill(false),
+                        activity: savedProgress.activity || Array(7).fill(false),
+                        forty: savedProgress.forty || Array(40).fill(false)
+                    };
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
